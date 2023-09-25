@@ -21,7 +21,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/nwan0033/FIT3179/main/Homework%20Source%20Code/2_symbol_map/data/global-data-on-sustainable-energy-2020.csv"
+          "url": "https://raw.githubusercontent.com/nwan0033/FIT3179/main/Homework%20Source%20Code/2_symbol_map/data/global-data-on-sustainable-energy.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
@@ -30,8 +30,8 @@
           "size": {
             "field": "Primary energy consumption per capita (kWh/person)",
             "type": "quantitative",
-            "title": "Primary energy consumption per capita (kWh/person)",
-            "scale": {"domain": [0, 185000]}
+            "title": "Energy consumption (kWh/cap)",
+            "scale": {"domain": [0, 270000]}
           },
           "color": {
             "field": "gdp_per_capita",
