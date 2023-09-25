@@ -21,7 +21,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/nwan0033/FIT3179/main/Homework%20Source%20Code/2_symbol_map/data/global-data-on-sustainable-energy.csv"
+          "url": "https://raw.githubusercontent.com/nwan0033/FIT3179/main/Homework_Source_Code/2_symbol_map/data/global-data-on-sustainable-energy.csv"
         },
         "mark": {"type": "circle"},
         "encoding": {
