@@ -21,23 +21,23 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/data/earthquake.csv"
+          "url": "https://raw.githubusercontent.com/nwan0033/FIT3179/main/Homework%20Source%20Code/2_symbol_map/data/global-data-on-sustainable-energy-2020.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
-          "longitude": {"field": "longitude", "type": "quantitative"},
-          "latitude": {"field": "latitude", "type": "quantitative"},
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
           "size": {
-            "field": "mag",
+            "field": "Primary energy consumption per capita (kWh/person)",
             "type": "quantitative",
-            "title": "Magnitude (Richter scale)",
-            "scale": {"domain": [4, 8]}
+            "title": "Primary energy consumption per capita (kWh/person)",
+            "scale": {"domain": [0, 185000]}
           },
           "color": {
-            "field": "depth",
+            "field": "gdp_per_capita",
             "type": "quantitative",
-            "title": "Depth in km",
-            "scale": {"scheme": "reds"}
+            "title": "GDP per capita",
+            "scale": {"scheme": "blues"}
           }
         }
       }

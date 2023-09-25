@@ -14,22 +14,22 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/data/earthquake.csv"
+        "url": "https://raw.githubusercontent.com/nwan0033/FIT3179/main/Homework%20Source%20Code/2_symbol_map/data/global-data-on-sustainable-energy-2020.csv"
       },
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
         "size": {
-          "field": "mag",
+          "field": "Access to clean fuels for cooking",
           "type": "quantitative",
           "title": "Magnitude (Richter scale)",
-          "scale": {"domain": [4, 8]}
+          "scale": {"domain": null}
         },
         "color": {
-          "field": "depth",
+          "field": "Access to electricity (% of population)",
           "type": "quantitative",
-          "title": "Depth in km",
+          "title": "Access to electricity",
           "scale": {"scheme": "reds"}
         }
       }
