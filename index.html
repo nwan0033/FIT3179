@@ -1,72 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>My First HTML Document</title>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
 </head>
+
 <body>
-    <h1>1. Introduction to HTML</h1>
-    <h2>1.1 Creating Paragraphs</h2>
-    <p>Unit: FIT3179 Data Visualisation.</p>
-    <p>This is a paragraph about paragraphs.</p>
 
-    <h2>1.2 Creating Tables</h2>
-    <h3>1.2.1 Table Rows</h3>
-    <p>This is a third paragraph about table rows</p>
+  <div class="page">
 
-    <h3>1.2.2 Table Columns</h3>
-    <p>This is a paragraph about table columns.</p>
-
-    <h3>1.2.3 Table of Student and Grade</h3>
-
-    <table border="1" cellpadding="10%">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Grade</th>
-        </tr>
-
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>HD</td>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Jackson</td>
-            <td>D</td>
-        </tr>
-        <tr>
-            <td>Jane</td>
-            <td>Smith</td>
-            <td>C</td>
-        </tr>
-    </table>
-
-    <h2>1.3 Embedding Images</h2>
-    <p>This is the fourth paragraph about images in HTML.</p>
-    <img src="panda.jpg" />
-
-    <h2>1.4 Hyperlinks in HTML</h2>
-
-    <a href="https://www.monash.edu/">
-        Click here to view the Monash Website.
-    </a>
-
-    <h2>1.5 Creating Sections</h2>
-    <div style="color: red;">
-        <h2>Heading of first group</h2>
-        <p>This paragraph is in the first group.</p>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis2" class="vis-container"></div>
+      </div>
     </div>
+    <!-- end pure grid group -->
 
-    <div style="color: green;">
-        <h2>Heading of second group</h2>
-        <p>This paragraph is in the second group.</p>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis1" class="vis-container"></div>
+      </div>
     </div>
+    <!-- end pure grid group -->
 
-    <h2>1.6 Editing Files on GitHub</h2>
-    <h3>Added this new heading directly on GitHub.</h3>
-    <p>Added this new paragraph directly on GitHub.</p>
+  </div> <!-- end page -->
 
-    <!-- Write comments like this (won't appear in actual doc) -->
+  <script type="text/javascript">
+    var specVis1 = "./bar_chart.json";
+    var specVis2 = "./symbol_map_with_graticules.vg.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+  </script>
 </body>
+
 </html>
